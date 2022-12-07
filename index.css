@@ -5,8 +5,22 @@ body{
 .headertp{
     background: #100D0D;
     height: 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .logo {
-    padding: 0px 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-self: center;
+    align-items: center;
 }
+
+.barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
