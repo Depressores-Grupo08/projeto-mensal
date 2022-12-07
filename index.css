@@ -64,7 +64,7 @@ header {
 
 .menu:hover {
     padding-left: 5px;
-    background: #1a0a31;
+    background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: .3s;
