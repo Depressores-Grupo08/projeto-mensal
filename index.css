@@ -81,17 +81,17 @@ header {
     
 }
 
-.oculto {
+.oculto { /* oculta o menu*/
     width: 60px;
 }
 
-.oculto .txt {
+.oculto .txt { /* oculta o texto do menu */
     display: none;
     transition: .3s;
 
 }
 
-.oculto .btn svg {
+.oculto .btn svg { /* rotaciona a seta do menu */
     transform: rotate(180deg);
     transition: .3s;
 }
