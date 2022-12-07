@@ -15,7 +15,7 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 65vw;
+    gap: 60vw;
 }
 
 .logo{
