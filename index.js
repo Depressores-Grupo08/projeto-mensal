@@ -11,6 +11,13 @@ function mostrarJogos(resposta){
                             <p>${item.title}</p>
                             <p>${item.short_description}</p>
                             </a>
+                            <div id="div_comprar_favoritos">
+                            
+                                <button id="botao_comprar">JOGAR</button>
+
+                                <input type="checkbox" id="input_favoritos">
+                                </input>
+                            </div>
                         </div>`
     })
 
