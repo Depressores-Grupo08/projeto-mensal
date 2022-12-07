@@ -1,0 +1,99 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #000000;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo {
+    color: aliceblue
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* MENU LATERAL */ 
+/* container = .menu-lateral */
+
+
+.menu-lateral { /*background, bordas, sombra*/ 
+    width: 200px;
+    background-color: #393939;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: .3s;
+    box-shadow: 10px 5px 20px black;
+    
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end; /* coloca a seta para a direita do menu */
+
+}
+
+.btn .arrow { /* espacamento da seta do menu */
+    padding: 0 12px;
+}
+
+.menu { /* menu */
+    display: flex;
+    height: 50px; /* altura do menu */
+    border-bottom: .5px solid #000; /* divisoria dos botoes do menu*/
+    color: #fff; /* cor da letra do menu */
+    align-items: center; 
+    cursor: pointer; /* muda o cursor para mãozinha */
+}
+
+.menu:hover {
+    padding-left: 5px;
+    background: #1a0a31;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: .3s;
+}
+
+.icon { /*ajusta o tamanho dos icones para fixalos no menu */
+    flex: 1; /*poiscao dos icones no flex da div */
+    min-width: 60px;
+    max-width: 60px;
+}
+.txt {
+    flex: 5;
+    padding-left: 20px;
+    
+}
+
+.oculto {
+    width: 60px;
+}
+
+.oculto .txt {
+    display: none;
+    transition: .3s;
+
+}
+
+.oculto .btn svg {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+/* FIM -  MENU LATERAL */ 
+
