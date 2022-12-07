@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 74vw;
+    gap: 65vw;
 }
 
 .logo{
@@ -17,6 +17,13 @@ body{
     display: flex;
     align-self: center;
     align-items: center;
+    flex-direction: row;
+}
+
+.titulo{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Poppins';
 }
 
 .barra{
