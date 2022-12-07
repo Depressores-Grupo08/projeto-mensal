@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#jogos{
+    display: flex;
+    width: 100vw;
+    height: 1000px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
+}
+#div_jogos{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 28vw;
+    height: 400px;
+    background-color: #FFFFFF;
+    border-radius: 28px;
+}
+#imagem_jogo{
+    width: 28vw;
+    border-radius: 24px;
+}
+#link_jogo{
+    color:black;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}

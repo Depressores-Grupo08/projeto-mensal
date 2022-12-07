@@ -1,12 +1,13 @@
+
 const mostrar = document.getElementById("jogos");
 
 function mostrarJogos(resposta){
 
     resposta.slice(0, 6).forEach(function(item){
 
-        mostrar.innerHTML += `<div>
-                            <a href="${item.game_url}">
-                            <img src="${item.thumbnail}">
+        mostrar.innerHTML += `<div id="div_jogos">
+                            <a id="link_jogo"href="${item.game_url}">
+                            <img id="imagem_jogo" src="${item.thumbnail}">
                             <p>${item.title}</p>
                             <p>${item.short_description}</p>
                             </a>
