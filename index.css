@@ -78,6 +78,7 @@ header {
     border-bottom-right-radius: 10px;
     transition: .3s;
     box-shadow: 10px 5px 20px black;
+    position: absolute; 
     
 }
 
