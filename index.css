@@ -17,6 +17,11 @@ header {
     justify-content: space-between;
 }
 
+.containter {
+    display: flex;
+    flex-direction: row;
+}
+
 .titulo {
     color: aliceblue
 }
@@ -61,9 +66,10 @@ header {
 }
 /* fim homelong*/
 
+
+
 /* MENU LATERAL */ 
 /* container = .menu-lateral */
-
 
 .menu-lateral { /*background, bordas, sombra*/ 
     width: 200px;
@@ -87,7 +93,7 @@ header {
 
 .menu { /* menu */
     display: flex;
-    height: 50px; /* altura do menu */
+    height: 40px; /* altura do menu */
     border-bottom: .5px solid #000; /* divisoria dos botoes do menu*/
     color: #fff; /* cor da letra do menu */
     align-items: center; 
