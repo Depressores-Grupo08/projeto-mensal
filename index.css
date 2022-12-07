@@ -11,14 +11,16 @@ html, body {
 .headertp{
     background: #100D0D;
     height: 5vw;
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 60vw;
 }
 
 .logo{
+    max-width: 100%;
+    width: 25%;
     padding: 10px 20px;
     display: flex;
     align-self: center;
@@ -32,7 +34,14 @@ html, body {
     font-family: 'Poppins';
 }
 
+.ocup{
+    max-width: 100%;
+    width: 50%;
+}
+
 .barra{
+    max-width: 100%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
