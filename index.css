@@ -145,12 +145,10 @@ html, body {
 /* Slides  */
 
 .content-slides {
-    height: 400px;
     width: 835px;
-    border-radius: 20px;
+    display: grid;
     overflow: hidden;
     position: absolute;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     left: 70%; /* centraliza o slide */
     top: 15%;
     transform: translate(-70%, 0); /* centraliza o slide */
@@ -159,13 +157,12 @@ html, body {
 .content-slides .slides img {
     height: 100%;
     width: 100%;
+    border-radius: 20px;
 }
 
 .navigation { /* barra de navegação do slide */
     display: flex;
-    position: absolute;
-    bottom: 160px;
-    left: 850px;
+    justify-self: center;
 }
 
 .bar { /* barra de navegação do slide */
