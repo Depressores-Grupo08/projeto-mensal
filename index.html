@@ -8,12 +8,27 @@
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Vale Games</title>
 </head>
 
 <body>
     <header class="headertp">
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="#fcfcfc" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="152" y1="108" x2="184" y2="108" fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="72" y1="108" x2="104" y2="108" fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="88" y1="92" x2="88" y2="124" fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><path d="M172,55.7,84,56A52.1,52.1,0,0,0,32.8,99h0L16.4,183.1a28,28,0,0,0,47.4,24.7h0L107,160l65-.3a52,52,0,1,0,0-104Z" fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M223.2,98.7l16.4,84.4a28,28,0,0,1-47.4,24.7h0l-43.2-48" fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="#fcfcfc" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <line x1="152" y1="108" x2="184" y2="108" fill="none" stroke="#fcfcfc" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="72" y1="108" x2="104" y2="108" fill="none" stroke="#fcfcfc" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="88" y1="92" x2="88" y2="124" fill="none" stroke="#fcfcfc" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                <path
+                    d="M172,55.7,84,56A52.1,52.1,0,0,0,32.8,99h0L16.4,183.1a28,28,0,0,0,47.4,24.7h0L107,160l65-.3a52,52,0,1,0,0-104Z"
+                    fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                </path>
+                <path d="M223.2,98.7l16.4,84.4a28,28,0,0,1-47.4,24.7h0l-43.2-48" fill="none" stroke="#fcfcfc"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            </svg>
             <p></p>
             <span class="titulo">VALE GAMES</span>
         </div>
@@ -28,6 +43,40 @@
 
 
     <div class="containter">
+       
+        <div class=content-slides>
+            <div class="slides">
+
+                <input class="input" type="radio" name="slide" id="slide1" checked>
+                <input class="input" type="radio" name="slide" id="slide2">
+                <input class="input" type="radio" name="slide" id="slide3">
+                <input class="input" type="radio" name="slide" id="slide4">
+                <input class="input" type="radio" name="slide" id="slide5">
+
+
+
+                <div class="slide s1">
+                    <img src="./banner/daiblo-banner.jpg" alt="imagem">
+                </div>
+
+                <div class="slide">
+                    <img src="./banner/overwatch-banner.jpg" alt="imagem">
+                </div>
+
+                <div class="slide">
+                    <img src="./banner/pubg-banner.jpg" alt="imagem">
+                </div>
+
+                <div class="slide">
+                    <img src="./banner/lostark-banner.jpg" alt="imagem">
+                </div>
+
+                <div class="slide">
+                    <img src="./banner/enlisted-banner.jpg" alt="imagem">
+                </div>
+            </div>
+        </div>
+
         <div class="menu-lateral oculto">
             <div class="menu btn">
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fcfcfc"
@@ -164,13 +213,24 @@
         </div>
 
         <div id="jogos">
-            <img class="diablo-img" src="./banner/daiblo-banner.jpg" alt="banner">
         </div>
-        
+
+    </div>
+
+    <div class="navigation">
+
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+        <label class="bar" for="slide4"></label>
+        <label class="bar" for="slide5"></label>
+
     </div>
 
     <script src="js/main.js"></script>
     <script src="./index.js"></script>
+    <script src="./banner.js"></script>
+
 
 </body>
 
