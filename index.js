@@ -1,5 +1,6 @@
 const mostrar = document.getElementById("jogos");
 const mostraBanner = document.getElementById("banner");
+const printFav = document.getElementById("")
 const btn = document.getElementById("botaoCarregar");
 
 let primeiraP = 0;
@@ -22,8 +23,10 @@ function mostrarJogos(resposta) {
                             <p>${item.short_description}</p>
                             <p>${item.genre}</p>
                             </a>
+                            <button type="button"  value="${item.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                         </div>`
     })
+    
 
     function carregar(){
     
@@ -36,13 +39,41 @@ function mostrarJogos(resposta) {
                                 <p>${item.short_description}</p>
                                 <p>${item.genre}</p>
                                 </a>
+                                <button type="button"  value="${item.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                                 </div>`
         })
     }
-    
+
     btn.addEventListener("click", carregar);
+
 }
 
+function salvarFavoritos(identidade) {
+
+    let recArray = localStorage.getItem('identidades');
+
+    if(recArray == undefined){
+        localStorage.setItem('identidades', JSON.stringify([]));
+    }
+
+    let novoArray = JSON.parse(recArray);
+
+    let verifica = novoArray.indexOf(identidade.value);
+    console.log(achei)
+
+    if(verifica != -1){
+        novoArray.splice(verifica, 1);
+        localStorage.setItem('identidades', JSON.stringify(novoArray));
+        return;
+    }
+    novoArray.push(identidade.value);
+    localStorage.setItem('identidades', JSON.stringify(novoArray));
+    console.log(novoArray);
+}
+
+function printarFavoritos(){
+    
+}
 
 
 const options = {
