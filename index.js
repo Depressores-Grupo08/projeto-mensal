@@ -20,16 +20,15 @@ function mostrarJogos(resposta) {
     resposta.slice(primeiraP, primeiraP += 6).forEach(function (item) {
 
         mostrar.innerHTML += `<div id="div_jogos">
-                            <a id="link_jogo" href="${item.game_url}">
-                            <img id="imagem_jogo" src="${item.thumbnail}">
-                            <p>${item.title}</p>
-                            <p>${item.short_description}</p>
-                            <p>${item.genre}</p>
-                            </a>
+                                                    
+                                <img id="imagem_jogo" src="${item.thumbnail}">
+                                <p id="p1">${item.title}</p>
+                                <p id="p2">${item.short_description}</p>
+                                <p id="pgenero">${item.genre}</p>
                                 <div id="div_comprar_favoritos">
-                                    <button id="botao_comprar">JOGAR</button>
+                                    <button id="botao_comprar"><a id="link_jogo" href="${item.game_url}">JOGAR</a></button>
 
-                                    <button id="input_favoritos" type="button"  value="${item.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+                                    <input id="input_favoritos" type="checkbox" value="${item.id}" onclick="salvarFavoritos(this)">
                                 </div>
                             </div>`
     })
@@ -40,13 +39,13 @@ function mostrarJogos(resposta) {
         resposta.slice(primeiraP, primeiraP += 10).forEach(function (item) {
     
             mostrar.innerHTML += `<div>
-                                <a href="${item.game_url}">
-                                <img src="${item.thumbnail}">
-                                <p>${item.title}</p>
-                                <p>${item.short_description}</p>
-                                <p>${item.genre}</p>
-                                </a>
-                                <button type="button"  value="${item.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+                                <img id="imagem_jogo" src="${item.thumbnail}">
+                                <p id="p1">${item.title}</p>
+                                <p id="p2">${item.short_description}</p>
+                                <p id="pgenero">${item.genre}</p>
+                                
+                                <button><a href="${item.game_url}">JOGAR</a></button>
+                                <input type="checkbox" value="${item.id}" onclick="salvarFavoritos(this)">
                                 </div>`
         })
     }

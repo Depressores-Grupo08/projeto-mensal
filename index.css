@@ -72,10 +72,9 @@ html, body {
 
 
 #jogos{
-    margin-top: 70vh;
+    margin-top: 80vh;
     display: flex;
     width: 100vw;
-    height: 1500px;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -86,7 +85,7 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     width: 28vw;
-    height: 450px;
+    height: 500px;
     background-color: #FFFFFF;
     border-radius: 28px;
 }
@@ -94,11 +93,29 @@ html, body {
     width: 28vw;
     border-radius: 24px;
 }
+#p1{
+    font-family: 'Poppins';
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+#p2{
+    font-family: 'Poppins';
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+}
+#pgenero{
+    font-family: 'Poppins';
+    text-align: right;
+    width: 100%;
+    font-weight: bold;
+}
+
 #link_jogo{
-    color:black;
+    color:white;
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 15px;
     text-decoration: none;
     text-align: center;
 }
