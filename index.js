@@ -103,10 +103,11 @@ function filtrar(categoria) {
 
     let mostrarFiltrados = TODOS_JOGOS.filter((valorAtual) => {
         return valorAtual.genre.includes(categoria);
-        
     })
     console.log(mostrarFiltrados);
+    
 }
+
 const options = {
     method: 'GET',
     headers: {
