@@ -11,7 +11,7 @@ function mostrarJogos(resposta) {
 
     mostraBanner.innerHTML += `<div class="slide s1">
                                     <a href="${resposta[0].game_url}">
-                                    <img src="${resposta[0].thumbnail}">
+                                    <img id="img_size" src="${resposta[0].thumbnail}">
                                     </a>
                                 </div>`
 

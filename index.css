@@ -165,7 +165,22 @@ html, body {
 #banner { 
     display: flex;
     position: absolute;
-    }
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: flex;
+}
+
+#img_size { 
+    width: 820px;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Fim Slides */
 
 
