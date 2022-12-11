@@ -40,7 +40,7 @@ html, body {
     gap: 1.2vw;
 }
 
-#aba1{
+.aba1{
     text-decoration: none;
     color: white;
     font-family: 'Poppins';
@@ -60,15 +60,7 @@ html, body {
 
 /*homelong*/
 
-.diablo-img { /*banner*/
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 40px;
-    width: 70vw;
-    height: 350px;
-}
+
 
 
 #jogos{

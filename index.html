@@ -19,13 +19,15 @@
         </div>
 
         <div class="barra">
-            <a id="aba1" href="">Favoritos</a>
-            <a id="aba1" href="">Pesquisa</a>
-            <a id="aba1" href="">Todos</a>
-            <a id="aba1" href="">PC</a>
+            <a class="aba1" href="">PC</a>
+            <a class="aba1" href="">Browser</a>
+            <a class="aba1" href="">All</a>
+            <a class="aba1" id="favoritos" role="button" onclick="printarFavoritos()">Favoritos</a>
         </div>
     </header>
 
+    <div id="banner">
+    </div>
 
     <div class="containter">
         <div class="menu-lateral oculto">
@@ -66,7 +68,9 @@
                         fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
                     </path>
                 </svg>
-                <div class="txt">Carrinho</div>
+                <div class="txt">
+                    <button id="cardGame" onclick="filtrar('Card Game')">CARD GAME</button>
+                </div>
 
             </div>
 
@@ -85,7 +89,9 @@
                     <line x1="128" y1="32" x2="128" y2="224" fill="none" stroke="#1a1a1a" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="16"></line>
                 </svg>
-                <div class="txt">MMORPG</div>
+                <div class="txt">
+                    <button id="MMORPG" onclick="filtrar('MMORPG')">MMORPG</button>
+                </div>
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fcfcfc"
@@ -100,7 +106,9 @@
                     <path d="M180,108a52,52,0,0,1-104,0c0-44,52-76,52-76S180,64,180,108Z" fill="none" stroke="#fcfcfc"
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
                 </svg>
-                <div class="txt">Survival</div>
+                <div class="txt">
+                    <button id="MOBA" onclick="filtrar('MOBA')">MOBA</BUtton>
+                </div>
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fcfcfc"
@@ -115,7 +123,9 @@
                         fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
                     </path>
                 </svg>
-                <div class="txt">PVP</div>
+                <div class="txt">
+                    <button id="luta" onclick="filtrar('Fighting')">LUTA</button>
+                </div>
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fcfcfc"
@@ -130,7 +140,9 @@
                         fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
                     </path>
                 </svg>
-                <div class="txt">Luta</div>
+                <div class="txt">
+                    <button id="Battle" onclick="filtrar('Battle Royale')">BATTLE ROYALE</button>
+                </div>
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1a1a1a"
@@ -147,7 +159,9 @@
                     <line x1="220" y1="128" x2="180" y2="128" fill="none" stroke="#1a1a1a" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="16"></line>
                 </svg>
-                <div class="txt">FPS</div>
+                <div class="txt">
+                    <button id="estrategia" onclick="filtrar('Strategy')">ESTRATÉGIA</button>
+                </div>
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1a1a1a"
@@ -158,18 +172,19 @@
                     <path d="M40,168c64-48,112,48,176,0V48C152,96,104,0,40,48" fill="none" stroke="#1a1a1a"
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
                 </svg>
-                <div class="txt">Arcade</div>
+                <div class="txt">
+                    <button id="Shooter" onclick="filtrar('Shooter')">SHOOTER</button>
+                </div>
             </div>
 
         </div>
 
         <div id="jogos">
-            <img class="diablo-img" src="./banner/daiblo-banner.jpg" alt="banner">
         </div>
         
     </div>
-
-    <script src="js/main.js"></script>
+    <button id="botaoCarregar">Carregar</button>
+    <script src="./js/main.js"></script>
     <script src="./index.js"></script>
 
 </body>
