@@ -16,7 +16,10 @@
             <li>PC</li>
             <li>Browser</li>
             <li>All</li>
-            <li>Favoritos</li>
+            <li><a role="button" onclick="printarFavoritos()">FAVORITOS</a>
+                <div id="favoritos">
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -26,13 +29,27 @@
     <div class="menu">
         <ul class="menu-filtros">
             <li>HOME</li>
-            <li>CARRINHO</li>
-            <li>MMORPG</li>
-            <li>SURVIVAL</li>
-            <li>PVP</li>
-            <li>LUTA</li>
-            <li>FPS</li>
-            <li>ARCADE</li>
+            <li>CARD GAME
+                <button id="cardGame" onclick="filtrar('Card Game')">CARD GAME</button>
+            </li>
+            <li>MMORPG
+                <button id="MMORPG" onclick="filtrar('MMORPG')">MMORPG</button>
+            </li>
+            <li>MOBA
+                <button id="ARPG" onclick="filtrar('MOBA')">MOBA</BUtton>
+            </li>
+            <li>BATTLE ROYALE
+                <button id="Battle" onclick="filtrar('Battle Royale')">BATTLE ROYALE</button>
+            </li>
+            <li>ESTRATÉGIA
+                <button id="MMOARPG" onclick="filtrar('Strategy')">ESTRATÉGIA</button>
+            </li>
+            <li>FPS
+                <button id="Shooter" onclick="filtrar('Shooter')">SHOOTER</button>
+            </li>
+            <li>LUTA
+                <button id="luta" onclick="filtrar('Fighting')">LUTA</button>
+            </li>
         </ul>
     </div>
 
