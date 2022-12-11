@@ -99,7 +99,6 @@ function printarFavoritos() {
 } printFav.addEventListener('click', printarFavoritos)
 
 function filtrar(categoria) {
-
     let mostrarFiltrados = TODOS_JOGOS.filter((valorAtual) => {
         return valorAtual.genre.includes(categoria);
     })
