@@ -46,6 +46,7 @@ html, body {
     color: white;
     font-family: 'Poppins';
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 
@@ -60,6 +61,18 @@ html, body {
 }
 
 /*homelong*/
+
+#banner {
+    width: 100%;
+    height: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 #jogos{
     display: flex;
@@ -181,7 +194,7 @@ html, body {
     transition: .3s;
     box-shadow: 10px 5px 20px black;
     position: fixed;
-    top: 0;
+    top: 10vh;
 }
 
 .btn {
@@ -219,6 +232,18 @@ html, body {
 .txt {
     flex: 5;
     padding-left: 20px;
+    
+}
+
+.menu button {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+    background: none;
+    font-family: 'Poppins';
+    border:none!important;
+    color: #fff;
+    cursor: pointer;
     
 }
 

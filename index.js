@@ -8,6 +8,7 @@ let primeiraP = 0;
 let segundaP = 0;
 let TODOS_JOGOS;
 
+
 function mostrarJogos() {
 
     mostraBanner.innerHTML = `<div>
@@ -15,6 +16,7 @@ function mostrarJogos() {
                                     <img src="${TODOS_JOGOS[0].thumbnail}">
                                     </a>
                                 </div>`
+
 
     let exibirPrimeiros = TODOS_JOGOS.slice(primeiraP, primeiraP += 6)
     exibirPrimeiros.forEach(function (exibirRes) {
@@ -30,6 +32,7 @@ function mostrarJogos() {
                             </div>
                         </div>`
     })
+
 }
 
 function carregar() {
