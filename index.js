@@ -31,9 +31,9 @@ function mostrarJogos() {
     })
 }
 
-function carregar() {
+function carregar(exibirItens) {
 
-    let exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
+    exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
     exibirItens.forEach(function (exibir) {
         mostrar.innerHTML += `<div id="div_jogos">
                             <a id="link_jogo" href="${exibir.game_url}">
@@ -86,7 +86,7 @@ function printarFavoritos() {
         let indice = TODOS_JOGOS.findIndex(p => p.id == ids[i]);
         aux = TODOS_JOGOS[indice];
         fav.push(aux);
-    }   
+    }
 
     fav.forEach(function (itemFav) {
         mostrar.innerHTML += `<div id="div_jogos>
@@ -115,8 +115,9 @@ function filtrar(categoria) {
                                     <img src="${mostrarFiltrados[0].thumbnail}">
                                     </a>
                                 </div>`
-
-    mostrarFiltrados.forEach(function(itensFiltro){
+                                
+    let categ = mostrarFiltrados.slice(primeiraP, primeiraP += 6)
+    categ.forEach(function (itensFiltro) {
         mostrar.innerHTML += `<div id="div_jogos>
                                 <a id="link_jogo" href="${itensFiltro.game_url}">
                                 <img id="imagem_jogo" src="${itensFiltro.thumbnail}">
@@ -127,13 +128,13 @@ function filtrar(categoria) {
                                 <button type="button"  value="${itensFiltro.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                             </div>`
     })
-    
+
 }
 
 function filtrarPlat(plataforma) {
     mostrar.innerHTML = null;
     mostraBanner.innerHTML = null;
-    
+
     let mostrarPlataforma = TODOS_JOGOS.filter((valorAtual) => {
         return valorAtual.platform.includes(plataforma);
     })
@@ -145,7 +146,8 @@ function filtrarPlat(plataforma) {
                                     </a>
                                 </div>`
 
-    mostrarPlataforma.forEach(function(itensPlat){
+    let plat = mostrarPlataforma.slice(primeiraP, primeiraP += 6)
+    plat.forEach(function (itensPlat) {
         mostrar.innerHTML += `<div id="div_jogos>
                                 <a id="link_jogo" href="${itensPlat.game_url}">
                                 <img id="imagem_jogo" src="${itensPlat.thumbnail}">
@@ -156,7 +158,7 @@ function filtrarPlat(plataforma) {
                                 <button type="button"  value="${itensPlat.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                             </div>`
     })
-    
+
 }
 
 const options = {
