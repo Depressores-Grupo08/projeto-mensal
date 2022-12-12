@@ -13,7 +13,10 @@ function mostrarJogos() {
 
     mostraBanner.innerHTML = `<div>
                                     <a href="${TODOS_JOGOS[0].game_url}">
-                                    <img src="${TODOS_JOGOS[0].thumbnail}">
+                                    <div class="div_banner">
+                                        <img class="imgbanner2" src="${TODOS_JOGOS[0].thumbnail}">
+                                    </div>
+                                    <img class="imgbanner1"src="${TODOS_JOGOS[0].thumbnail}">
                                     </a>
                                 </div>`
 
@@ -118,7 +121,10 @@ function filtrar(categoria) {
 
     mostraBanner.innerHTML = `<div>
                                     <a href="${mostrarFiltrados[0].game_url}">
-                                    <img src="${mostrarFiltrados[0].thumbnail}">
+                                    <div class="div_banner">
+                                        <img class="imgbanner2" src="${mostrarFiltrados[0].thumbnail}">
+                                    </div>
+                                    <img class="imgbanner1" src="${mostrarFiltrados[0].thumbnail}">
                                     </a>
                                 </div>`
 
