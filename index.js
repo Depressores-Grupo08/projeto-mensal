@@ -31,9 +31,9 @@ function mostrarJogos() {
     })
 }
 
-function carregar(exibirItens) {
+function carregar() {
 
-    exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
+    let exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
     exibirItens.forEach(function (exibir) {
         mostrar.innerHTML += `<div id="div_jogos">
                             <a id="link_jogo" href="${exibir.game_url}">
@@ -115,9 +115,8 @@ function filtrar(categoria) {
                                     <img src="${mostrarFiltrados[0].thumbnail}">
                                     </a>
                                 </div>`
-                                
-    let categ = mostrarFiltrados.slice(primeiraP, primeiraP += 6)
-    categ.forEach(function (itensFiltro) {
+
+    mostrarFiltrados.forEach(function (itensFiltro){
         mostrar.innerHTML += `<div id="div_jogos>
                                 <a id="link_jogo" href="${itensFiltro.game_url}">
                                 <img id="imagem_jogo" src="${itensFiltro.thumbnail}">
@@ -128,7 +127,6 @@ function filtrar(categoria) {
                                 <button type="button"  value="${itensFiltro.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                             </div>`
     })
-
 }
 
 function filtrarPlat(plataforma) {
@@ -146,8 +144,7 @@ function filtrarPlat(plataforma) {
                                     </a>
                                 </div>`
 
-    let plat = mostrarPlataforma.slice(primeiraP, primeiraP += 6)
-    plat.forEach(function (itensPlat) {
+    mostrarPlataforma.forEach(function (itensPlat) {
         mostrar.innerHTML += `<div id="div_jogos>
                                 <a id="link_jogo" href="${itensPlat.game_url}">
                                 <img id="imagem_jogo" src="${itensPlat.thumbnail}">
@@ -158,7 +155,6 @@ function filtrarPlat(plataforma) {
                                 <button type="button"  value="${itensPlat.id}" onclick="salvarFavoritos(this)">Favoritar</button>
                             </div>`
     })
-
 }
 
 const options = {
