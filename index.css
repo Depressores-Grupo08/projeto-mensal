@@ -6,6 +6,7 @@ html, body {
     border: 0;
     height: 100%;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
 }
 
 .headertp{
@@ -60,57 +61,102 @@ html, body {
 
 /*homelong*/
 
-
-
-
 #jogos{
     display: flex;
     width: 100vw;
-    height: 1500px;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
 }
-#div_jogos{
+.div_jogos{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 28vw;
-    height: 400px;
+    min-height: 500px;
     background-color: #FFFFFF;
     border-radius: 28px;
 }
-#imagem_jogo{
+.p1{
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 20px;
+}
+.p2{
+    width: 100%;
+    text-align: left;
+    font-family: 'Poppins';
+    margin: 0px;
+    margin-top: 20px;
+}
+.p3{
+    width: 100%;
+    text-align: right;
+    font-family: 'Poppins';
+    margin: 0px;
+    margin-top: 15px;
+}
+.sub_jogos{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-around;
+}
+.inputcheck{
+    cursor: pointer;
+    appearance: none;
+    background-image: url("imgs/estrela_branca.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+}
+.inputcheck:hover{
+    background-color: #393939;
+    border-radius: 50px;
+}
+.inputcheck:checked{
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-image: url("imgs/estrela_amarela.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.botao_jogar{
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    background-color: #2F2B49;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    text-align: center;
+}
+.imagem_jogo{
     width: 28vw;
     border-radius: 24px;
 }
-#link_jogo{
-    color:black;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    text-align: center;
-}
+
 /* fim homelong*/
-
-
 
 /* MENU LATERAL */ 
 /* container = .menu-lateral */
 
 .menu-lateral { /*background, bordas, sombra*/ 
-    margin-top: 40px;
     width: 200px;
     background-color: #393939;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: .3s;
     box-shadow: 10px 5px 20px black;
-    position: absolute; 
-    
+    position: fixed;
+    top: 0;
 }
 
 .btn {

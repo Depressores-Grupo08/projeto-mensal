@@ -19,14 +19,15 @@ function mostrarJogos() {
     let exibirPrimeiros = TODOS_JOGOS.slice(primeiraP, primeiraP += 6)
     exibirPrimeiros.forEach(function (exibirRes) {
 
-        mostrar.innerHTML += `<div id="div_jogos">
-                            <a id="link_jogo" href="${exibirRes.game_url}">
-                            <img id="imagem_jogo" src="${exibirRes.thumbnail}">
-                            <p>${exibirRes.title}</p>
-                            <p>${exibirRes.short_description}</p>
-                            <p>${exibirRes.genre}</p>
-                            </a>
-                            <button type="button"  value="${exibirRes.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+        mostrar.innerHTML += `<div class="div_jogos">
+                            <img class="imagem_jogo" src="${exibirRes.thumbnail}">
+                            <p class="p1">${exibirRes.title}</p>
+                            <p class="p2">${exibirRes.short_description}</p>
+                            <p class="p3">${exibirRes.genre}</p>
+                            <div class="sub_jogos">
+                            <a class="link_jogo" href="${exibirRes.game_url}"><button class="botao_jogar">Jogar</button></a>
+                                <input type="checkbox" class="inputcheck" value="${exibirRes.id}" onclick="salvarFavoritos(this)"></input>
+                            </div>
                         </div>`
     })
 }
@@ -35,15 +36,16 @@ function carregar() {
 
     let exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
     exibirItens.forEach(function (exibir) {
-        mostrar.innerHTML += `<div id="div_jogos">
-                            <a id="link_jogo" href="${exibir.game_url}">
-                            <img id="imagem_jogo" src="${exibir.thumbnail}">
-                            <p>${exibir.title}</p>
-                            <p>${exibir.short_description}</p>
-                            <p>${exibir.genre}</p>
-                            </a>
-                            <button type="button"  value="${exibir.id}" onclick="salvarFavoritos(this)">Favoritar</button>
-                            </div>`
+        mostrar.innerHTML += `<div class="div_jogos">
+                            <img class="imagem_jogo" src="${exibir.thumbnail}">
+                            <p class="p1">${exibir.title}</p>
+                            <p class="p2">${exibir.short_description}</p>
+                            <p class="p3">${exibir.genre}</p>
+                            <div class="sub_jogos">
+                            <a class="link_jogo" href="${exibir.game_url}"><button class="botao_jogar">Jogar</button></a>
+                                <input type="checkbox" class="inputcheck" value="${exibir.id}" onclick="salvarFavoritos(this)"></input>
+                            </div>
+                        </div>`
     })
 }
 btn.addEventListener("click", carregar);
@@ -89,15 +91,16 @@ function printarFavoritos() {
     }
 
     fav.forEach(function (itemFav) {
-        mostrar.innerHTML += `<div id="div_jogos>
-                                <a id="link_jogo" href="${itemFav.game_url}">
-                                <img id="imagem_jogo" src="${itemFav.thumbnail}">
-                                <p>${itemFav.title}</p>
-                                <p>${itemFav.short_description}</p>
-                                <p>${itemFav.genre}</p>
-                                </a>
-                                <button type="button"  value="${itemFav.id}" onclick="salvarFavoritos(this)">Favoritar</button>
-                            </div>`
+        mostrar.innerHTML += `<div class="div_jogos">
+                                    <img class="imagem_jogo" src="${itemFav.thumbnail}">
+                                    <p class="p1">${itemFav.title}</p>
+                                    <p class="p2">${itemFav.short_description}</p>
+                                    <p class="p3">${itemFav.genre}</p>
+                                    <div class="sub_jogos">
+                                    <a class="link_jogo" href="${itemFav.game_url}"><button class="botao_jogar">Jogar</button></a>
+                                        <input type="checkbox" class="inputcheck" value="${itemFav.id}" onclick="salvarFavoritos(this)"></input>
+                                    </div>
+                                </div>`
     })
 } printFav.addEventListener('click', printarFavoritos)
 
@@ -116,16 +119,17 @@ function filtrar(categoria) {
                                     </a>
                                 </div>`
 
-    mostrarFiltrados.forEach(function (itensFiltro){
-        mostrar.innerHTML += `<div id="div_jogos>
-                                <a id="link_jogo" href="${itensFiltro.game_url}">
-                                <img id="imagem_jogo" src="${itensFiltro.thumbnail}">
-                                <p>${itensFiltro.title}</p>
-                                <p>${itensFiltro.short_description}</p>
-                                <p>${itensFiltro.genre}</p>
-                                </a>
-                                <button type="button"  value="${itensFiltro.id}" onclick="salvarFavoritos(this)">Favoritar</button>
-                            </div>`
+    mostrarFiltrados.forEach(function (itensFiltro) {
+        mostrar.innerHTML += `<div class="div_jogos">
+                                <img class="imagem_jogo" src="${itensFiltro.thumbnail}">
+                                <p class="p1">${itensFiltro.title}</p>
+                                <p class="p2">${itensFiltro.short_description}</p>
+                                <p class="p3">${itensFiltro.genre}</p>
+                                    <div class="sub_jogos">
+                                        <a class="link_jogo" href="${itensFiltro.game_url}"><button class="botao_jogar">Jogar</button></a>
+                                        <input type="checkbox"  class="inputcheck" value="${itensFiltro.id}" onclick="salvarFavoritos(this)"></input>
+                                    </div>
+                                </div>`
     })
 }
 
@@ -145,14 +149,15 @@ function filtrarPlat(plataforma) {
                                 </div>`
 
     mostrarPlataforma.forEach(function (itensPlat) {
-        mostrar.innerHTML += `<div id="div_jogos>
-                                <a id="link_jogo" href="${itensPlat.game_url}">
-                                <img id="imagem_jogo" src="${itensPlat.thumbnail}">
-                                <p>${itensPlat.title}</p>
-                                <p>${itensPlat.short_description}</p>
-                                <p>${itensPlat.genre}</p>
-                                </a>
-                                <button type="button"  value="${itensPlat.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+        mostrar.innerHTML += `<div class="div_jogos">
+                                <img class="imagem_jogo" src="${itensPlat.thumbnail}">
+                                <p class="p1">${itensPlat.title}</p>
+                                <p class="p2">${itensPlat.short_description}</p>
+                                <p class="p3">${itensPlat.genre}</p>
+                                <div class="sub_jogos">
+                                <a class="link_jogo" href="${itensPlat.game_url}"><button class="botao_jogar">Jogar</button></a>
+                                    <input type="checkbox" class="inputcheck" value="${itensPlat.id}" onclick="salvarFavoritos(this)"></input>
+                                </div>
                             </div>`
     })
 }
