@@ -75,6 +75,9 @@ function salvarFavoritos(TODOS_JOGOS) {
 }
 
 function printarFavoritos() {
+    mostrar.innerHTML = null;
+    mostraBanner.innerHTML = null;
+
     let ids = localStorage.getItem('identidades');
     ids = JSON.parse(ids);
     let aux;
@@ -86,9 +89,9 @@ function printarFavoritos() {
     }   
 
     fav.forEach(function (itemFav) {
-        printFav.innerHTML += `<div>
-                                <a href="${itemFav.game_url}">
-                                <img src="${itemFav.thumbnail}">
+        mostrar.innerHTML += `<div id="div_jogos>
+                                <a id="link_jogo" href="${itemFav.game_url}">
+                                <img id="imagem_jogo" src="${itemFav.thumbnail}">
                                 <p>${itemFav.title}</p>
                                 <p>${itemFav.short_description}</p>
                                 <p>${itemFav.genre}</p>
@@ -99,10 +102,60 @@ function printarFavoritos() {
 } printFav.addEventListener('click', printarFavoritos)
 
 function filtrar(categoria) {
+    mostrar.innerHTML = null;
+    mostraBanner.innerHTML = null;
+
     let mostrarFiltrados = TODOS_JOGOS.filter((valorAtual) => {
         return valorAtual.genre.includes(categoria);
     })
     console.log(mostrarFiltrados);
+
+    mostraBanner.innerHTML = `<div>
+                                    <a href="${mostrarFiltrados[0].game_url}">
+                                    <img src="${mostrarFiltrados[0].thumbnail}">
+                                    </a>
+                                </div>`
+
+    mostrarFiltrados.forEach(function(itensFiltro){
+        mostrar.innerHTML += `<div id="div_jogos>
+                                <a id="link_jogo" href="${itensFiltro.game_url}">
+                                <img id="imagem_jogo" src="${itensFiltro.thumbnail}">
+                                <p>${itensFiltro.title}</p>
+                                <p>${itensFiltro.short_description}</p>
+                                <p>${itensFiltro.genre}</p>
+                                </a>
+                                <button type="button"  value="${itensFiltro.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+                            </div>`
+    })
+    
+}
+
+function filtrarPlat(plataforma) {
+    mostrar.innerHTML = null;
+    mostraBanner.innerHTML = null;
+    
+    let mostrarPlataforma = TODOS_JOGOS.filter((valorAtual) => {
+        return valorAtual.platform.includes(plataforma);
+    })
+    console.log(mostrarPlataforma);
+
+    mostraBanner.innerHTML = `<div>
+                                    <a href="${mostrarPlataforma[0].game_url}">
+                                    <img src="${mostrarPlataforma[0].thumbnail}">
+                                    </a>
+                                </div>`
+
+    mostrarPlataforma.forEach(function(itensPlat){
+        mostrar.innerHTML += `<div id="div_jogos>
+                                <a id="link_jogo" href="${itensPlat.game_url}">
+                                <img id="imagem_jogo" src="${itensPlat.thumbnail}">
+                                <p>${itensPlat.title}</p>
+                                <p>${itensPlat.short_description}</p>
+                                <p>${itensPlat.genre}</p>
+                                </a>
+                                <button type="button"  value="${itensPlat.id}" onclick="salvarFavoritos(this)">Favoritar</button>
+                            </div>`
+    })
     
 }
 
