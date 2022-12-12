@@ -98,7 +98,7 @@ function printarFavoritos() {
                                     <p class="p3">${itemFav.genre}</p>
                                     <div class="sub_jogos">
                                     <a class="link_jogo" href="${itemFav.game_url}"><button class="botao_jogar">Jogar</button></a>
-                                        <input type="checkbox" class="inputcheck" value="${itemFav.id}" onclick="salvarFavoritos(this)"></input>
+                                        <input type="checkbox" class="inputcheck" value="${itemFav.id}" onclick="salvarFavoritos(this)" checked></input>
                                     </div>
                                 </div>`
     })
