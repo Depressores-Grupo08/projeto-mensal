@@ -153,9 +153,13 @@ function filtrarPlat(plataforma) {
 
     mostraBanner.innerHTML = `<div>
                                     <a href="${mostrarPlataforma[0].game_url}">
-                                    <img src="${mostrarPlataforma[0].thumbnail}">
+                                    <div class="div_banner">
+                                        <img class="imgbanner2" src="${mostrarPlataforma[0].thumbnail}">
+                                    </div>
+                                    <img class="imgbanner1"src="${mostrarPlataforma[0].thumbnail}">
                                     </a>
                                 </div>`
+
 
     mostrarPlataforma.forEach(function (itensPlat) {
         mostrar.innerHTML += `<div class="div_jogos">
