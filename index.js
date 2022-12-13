@@ -16,8 +16,9 @@ function mostrarJogos() {
                                     <div class="div_banner">
                                         <img class="imgbanner2" src="${TODOS_JOGOS[0].thumbnail}">
                                     </div>
-                                    <img class="imgbanner1"src="${TODOS_JOGOS[0].thumbnail}">
                                     </a>
+                                    <img class="imgbanner1"src="${TODOS_JOGOS[0].thumbnail}">
+                                    
                                 </div>`
 
 
@@ -124,8 +125,8 @@ function filtrar(categoria) {
                                     <div class="div_banner">
                                         <img class="imgbanner2" src="${mostrarFiltrados[0].thumbnail}">
                                     </div>
-                                    <img class="imgbanner1" src="${mostrarFiltrados[0].thumbnail}">
                                     </a>
+                                    <img class="imgbanner1" src="${mostrarFiltrados[0].thumbnail}">
                                 </div>`
 
     mostrarFiltrados.forEach(function (itensFiltro) {
@@ -156,8 +157,8 @@ function filtrarPlat(plataforma) {
                                     <div class="div_banner">
                                         <img class="imgbanner2" src="${mostrarPlataforma[0].thumbnail}">
                                     </div>
-                                    <img class="imgbanner1"src="${mostrarPlataforma[0].thumbnail}">
                                     </a>
+                                    <img class="imgbanner1"src="${mostrarPlataforma[0].thumbnail}">
                                 </div>`
 
 
