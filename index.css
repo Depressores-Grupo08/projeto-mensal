@@ -188,7 +188,7 @@ html, body {
     border: none;
     border-radius: 50px;
     color: #000;
-    background-color: #D9D9D9;
+    background-color: #FFF;
     font-family: 'Poppins';
     text-align: center;
     font-size: 30px;
@@ -196,7 +196,7 @@ html, body {
 }
 #botaoCarregar:hover{
     background-color: #000;
-    color: #D9D9D9;
+    color: #FFF;
 }
 .div_botao{
     display: flex;
@@ -292,27 +292,21 @@ html, body {
 
 /* BOTÃO DE VOLTAR PRA CIMA */
 #voltar-topo{
-    font-size: 30px;
-    font-family: 'Poppins';
-    font-weight: bold;
     position: fixed;
     bottom: 30px;
     left: 50px;
-    color: #000;
-    background-color: #D9D9D9;
+    background-color: #FFF;
     border: none;
     height: 50px;
     width: 50px;
     cursor: pointer;
-    text-align: center;
     border-radius: 50px;
     z-index: 5;
     visibility: hidden;
 }
 
 #voltar-topo:hover {
-    background-color: #000;
-    color: #D9D9D9;
+    filter: invert(1);
 }
 
 #voltar-topo.visible {
