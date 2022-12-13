@@ -288,4 +288,31 @@ html, body {
 }
 /* FIM -  MENU LATERAL */ 
 
+/* BOTÃO DE VOLTAR PRA CIMA */
+#voltar-topo {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    background: #393939;
+    box-shadow: 0.5em 0.5em 0.7em #000;
+    color: #FFF;
+    border: none;
+    border-radius: 12px;
+    height: 50px;
+    width: 90px;
+    visibility: hidden;
+    opacity: 0.7;
+    cursor: pointer;
+}
 
+#voltar-topo:hover {
+    background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
+    height: 60px;
+    width: 100px;
+    padding: 5px;
+    transition: .3s;
+}
+
+#voltar-topo.visible {
+    visibility: visible;
+} /* FIM - BOTÃO VOLTAR TOPO */
