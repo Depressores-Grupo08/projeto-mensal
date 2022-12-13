@@ -79,7 +79,7 @@ html, body {
     position: absolute;
     z-index: 1;
     border-radius: 28px;
-    box-shadow: #000 10px 0 0px ;
+    box-shadow: #000 30px 10px 50px;
 }
 .imgbanner1 { 
     filter: blur(20px);
@@ -128,8 +128,9 @@ html, body {
 }
 .p3{
     width: 100%;
-    text-align: right;
+    padding-left: 70%;
     font-family: 'Poppins';
+    font-weight: bold;
     margin: 0px;
     margin-top: 15px;
 }
