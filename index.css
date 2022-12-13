@@ -128,11 +128,12 @@ html, body {
 }
 .p3{
     width: 100%;
-    padding-left: 70%;
     font-family: 'Poppins';
     font-weight: bold;
     margin: 0px;
     margin-top: 15px;
+    text-align: right;
+    margin-left: -20px;
 }
 .sub_jogos{
     display: flex;
