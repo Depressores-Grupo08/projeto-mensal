@@ -110,6 +110,7 @@ html, body {
     min-height: 500px;
     background-color: #FFFFFF;
     border-radius: 28px;
+    justify-content: space-between;
 }
 .p1{
     width: 100%;
@@ -133,13 +134,14 @@ html, body {
     margin: 0px;
     margin-top: 15px;
     text-align: right;
-    margin-left: -20px;
 }
 .sub_jogos{
     display: flex;
     margin-top: 20px;
     width: 100%;
     justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 18px;
 }
 .inputcheck{
     cursor: pointer;
