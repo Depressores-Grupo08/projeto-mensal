@@ -8,7 +8,9 @@ html, body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
 }
-
+.ativo {
+    color: #FFD700 !important;
+}
 .headertp{
     background: #100D0D;
     height: 5vw;

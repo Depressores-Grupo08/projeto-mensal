@@ -4,25 +4,25 @@ const printFav = document.getElementById("favoritos")
 const btn = document.getElementById("botaoCarregar");
 
 
-let primeiraP = 0;
-let segundaP = 0;
+
+let auxGames = 0;
 let TODOS_JOGOS;
 
 
-function mostrarJogos() {
-
+function mostrarJogos(JOGOS) {
+    auxGames = JOGOS;
     mostraBanner.innerHTML = `<div>
-                                    <a href="${TODOS_JOGOS[0].game_url}">
+                                    <a href="${JOGOS[0].game_url}">
                                     <div class="div_banner">
-                                        <img class="imgbanner2" src="${TODOS_JOGOS[0].thumbnail}">
+                                        <img class="imgbanner2" src="${JOGOS[0].thumbnail}">
                                     </div>
                                     </a>
-                                    <img class="imgbanner1"src="${TODOS_JOGOS[0].thumbnail}">
+                                    <img class="imgbanner1"src="${JOGOS[0].thumbnail}">
                                     
                                 </div>`
 
 
-    let exibirPrimeiros = TODOS_JOGOS.slice(primeiraP, primeiraP += 6)
+    let exibirPrimeiros = JOGOS.slice(0, 6);
     exibirPrimeiros.forEach(function (exibirRes) {
 
         mostrar.innerHTML += `<div class="div_jogos">
@@ -36,12 +36,14 @@ function mostrarJogos() {
                             </div>
                         </div>`
     })
-
+    // console.log(JOGOS[1].id)
 }
 
 function carregar() {
-
-    let exibirItens = TODOS_JOGOS.slice(primeiraP, primeiraP += 10)
+    let JOGOS_TELA = (document.querySelectorAll(".div_jogos").length) + 1;
+    console.log(JOGOS_TELA);
+    console.log(auxGames);
+    let exibirItens = auxGames.slice(JOGOS_TELA, JOGOS_TELA += 10);
     exibirItens.forEach(function (exibir) {
         mostrar.innerHTML += `<div class="div_jogos">
                             <img class="imagem_jogo" src="${exibir.thumbnail}">
@@ -96,84 +98,57 @@ function printarFavoritos() {
         aux = TODOS_JOGOS[indice];
         fav.push(aux);
     }
+    mostrarJogos(fav);
 
-    fav.forEach(function (itemFav) {
-        mostrar.innerHTML += `<div class="div_jogos">
-                                    <img class="imagem_jogo" src="${itemFav.thumbnail}">
-                                    <p class="p1">${itemFav.title}</p>
-                                    <p class="p2">${itemFav.short_description}</p>
-                                    <p class="p3">${itemFav.genre}</p>
-                                    <div class="sub_jogos">
-                                    <a class="link_jogo" href="${itemFav.game_url}"><button class="botao_jogar">Jogar</button></a>
-                                        <input type="checkbox" class="inputcheck" value="${itemFav.id}" onclick="salvarFavoritos(this)" checked></input>
-                                    </div>
-                                </div>`
-    })
 } printFav.addEventListener('click', printarFavoritos)
 
 function filtrar(categoria) {
+    document.querySelector(".menu-lateral").querySelector(".ativo").classList.remove("ativo");//remove a classe ativo do elemento que a possui
     mostrar.innerHTML = null;
     mostraBanner.innerHTML = null;
+    document.querySelector(`[data-categoria="${categoria}"]`).classList.add("ativo");//adiciona a classe ativo ao elemento que foi clicado
 
-    let mostrarFiltrados = TODOS_JOGOS.filter((valorAtual) => {
-        return valorAtual.genre.includes(categoria);
-    })
+    let plataforma = document.querySelector(".barra").querySelector(".ativo").dataset.plataforma;
+    let mostrarFiltrados = TODOS_JOGOS;
+    console.log(categoria, plataforma)
+
+    if (categoria != "home") {
+        mostrarFiltrados = mostrarFiltrados.filter((valorAtual) => {//filtra os jogos que possuem a categoria selecionada
+            return valorAtual.genre.includes(categoria);//retorna os jogos que possuem a categoria selecionada
+        })
+    } console.log(mostrarFiltrados);
+    if (plataforma != "All") {
+        mostrarFiltrados = mostrarFiltrados.filter((valorAtual) => {//filtra os jogos que possuem a plataforma selecionada
+            return valorAtual.platform.includes(plataforma);//retorna os jogos que possuem a plataforma selecionada
+        })
+    }
     console.log(mostrarFiltrados);
+    mostrarJogos(mostrarFiltrados);//mostra os jogos filtrados
 
-    mostraBanner.innerHTML = `<div>
-                                    <a href="${mostrarFiltrados[0].game_url}">
-                                    <div class="div_banner">
-                                        <img class="imgbanner2" src="${mostrarFiltrados[0].thumbnail}">
-                                    </div>
-                                    </a>
-                                    <img class="imgbanner1" src="${mostrarFiltrados[0].thumbnail}">
-                                </div>`
-
-    mostrarFiltrados.forEach(function (itensFiltro) {
-        mostrar.innerHTML += `<div class="div_jogos">
-                                <img class="imagem_jogo" src="${itensFiltro.thumbnail}">
-                                <p class="p1">${itensFiltro.title}</p>
-                                <p class="p2">${itensFiltro.short_description}</p>
-                                <p class="p3">${itensFiltro.genre}</p>
-                                    <div class="sub_jogos">
-                                        <a class="link_jogo" href="${itensFiltro.game_url}"><button class="botao_jogar">Jogar</button></a>
-                                        <input type="checkbox"  class="inputcheck" value="${itensFiltro.id}" onclick="salvarFavoritos(this)"></input>
-                                    </div>
-                                </div>`
-    })
 }
 
 function filtrarPlat(plataforma) {
+    document.querySelector(".barra").querySelector(".ativo").classList.remove("ativo");//remove a classe ativo do elemento que a possui
     mostrar.innerHTML = null;
     mostraBanner.innerHTML = null;
+    document.querySelector(`[data-plataforma="${plataforma}"]`).classList.add("ativo");//adiciona a classe ativo ao elemento que foi clicado
 
-    let mostrarPlataforma = TODOS_JOGOS.filter((valorAtual) => {
-        return valorAtual.platform.includes(plataforma);
-    })
+    let categoria = document.querySelector(".menu-lateral").querySelector(".ativo").dataset.categoria;
+    let mostrarPlataforma = TODOS_JOGOS;
+    console.log(categoria, plataforma)
+    if (plataforma != "All") {
+        mostrarPlataforma = mostrarPlataforma.filter((valorAtual) => {
+            return valorAtual.platform.includes(plataforma);
+        })
+    } console.log(mostrarPlataforma);
+    if (categoria != "home") {
+        mostrarPlataforma = mostrarPlataforma.filter((valorAtual) => {
+            return valorAtual.genre.includes(categoria);
+        })
+    }
     console.log(mostrarPlataforma);
+    mostrarJogos(mostrarPlataforma);
 
-    mostraBanner.innerHTML = `<div>
-                                    <a href="${mostrarPlataforma[0].game_url}">
-                                    <div class="div_banner">
-                                        <img class="imgbanner2" src="${mostrarPlataforma[0].thumbnail}">
-                                    </div>
-                                    </a>
-                                    <img class="imgbanner1"src="${mostrarPlataforma[0].thumbnail}">
-                                </div>`
-
-
-    mostrarPlataforma.forEach(function (itensPlat) {
-        mostrar.innerHTML += `<div class="div_jogos">
-                                <img class="imagem_jogo" src="${itensPlat.thumbnail}">
-                                <p class="p1">${itensPlat.title}</p>
-                                <p class="p2">${itensPlat.short_description}</p>
-                                <p class="p3">${itensPlat.genre}</p>
-                                <div class="sub_jogos">
-                                <a class="link_jogo" href="${itensPlat.game_url}"><button class="botao_jogar">Jogar</button></a>
-                                    <input type="checkbox" class="inputcheck" value="${itensPlat.id}" onclick="salvarFavoritos(this)"></input>
-                                </div>
-                            </div>`
-    })
 }
 
 const options = {
@@ -185,9 +160,9 @@ const options = {
 };
 
 fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', options)
-    .then(resposta => resposta.json())
-    .then(data => {
-        TODOS_JOGOS = data
-        mostrarJogos()
+    .then(resposta => resposta.json())//transforma a resposta em json
+    .then(data => {//data é o json
+        TODOS_JOGOS = data //atribui o json a variavel TODOS_JOGOS
+        mostrarJogos(TODOS_JOGOS);//chama a função mostrarJogos e passa o json como parametro
     })
     .catch(err => console.error(err));
