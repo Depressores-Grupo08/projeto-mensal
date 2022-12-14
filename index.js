@@ -11,6 +11,7 @@ let TODOS_JOGOS;
 
 function mostrarJogos(JOGOS) {//função que mostra os jogos na tela
     auxGames = JOGOS;
+    
     mostraBanner.innerHTML = `<div>
                                     <a href="${JOGOS[0].game_url}">
                                     <div class="div_banner">
