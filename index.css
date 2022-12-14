@@ -1,6 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,10 +10,12 @@ html, body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
 }
+
 .ativo {
     color: #FFD700 !important;
 }
-.headertp{
+
+.headertp {
     background: #100D0D;
     height: 5vw;
     width: 100%;
@@ -21,21 +25,22 @@ html, body {
     gap: 60vw;
 }
 
-.logo{
+.logo {
     padding: 10px 20px;
     display: flex;
     align-self: center;
     align-items: center;
     flex-direction: row;
+    cursor: pointer;
 }
 
-.titulo{
+.titulo {
     color: white;
     font-size: 1.3rem;
     font-family: 'Poppins';
 }
 
-.barra{
+.barra {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +48,14 @@ html, body {
     gap: 1.2vw;
 }
 
-.aba1{
+.aba1 {
     text-decoration: none;
     color: white;
     font-family: 'Poppins';
     font-size: 1.2rem;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -64,7 +71,7 @@ html, body {
 
 /*homelong*/
 
-#banner { 
+#banner {
     height: 40%;
 }
 
@@ -83,7 +90,8 @@ html, body {
     border-radius: 28px;
     box-shadow: #000 30px 10px 50px;
 }
-.imgbanner1 { 
+
+.imgbanner1 {
     filter: blur(20px);
     width: 98vw;
     height: 100vh;
@@ -94,7 +102,7 @@ html, body {
 
 
 
-#jogos{
+#jogos {
     display: flex;
     width: 100vw;
     margin-top: 20vh;
@@ -103,7 +111,8 @@ html, body {
     align-items: flex-start;
     z-index: 2;
 }
-.div_jogos{
+
+.div_jogos {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -114,7 +123,8 @@ html, body {
     border-radius: 28px;
     justify-content: space-between;
 }
-.p1{
+
+.p1 {
     width: 100%;
     text-align: center;
     font-family: 'Poppins';
@@ -122,14 +132,16 @@ html, body {
     margin: 0px;
     margin-top: 20px;
 }
-.p2{
+
+.p2 {
     width: 100%;
     text-align: left;
     font-family: 'Poppins';
     margin: 0px;
     margin-top: 20px;
 }
-.p3{
+
+.p3 {
     width: 100%;
     font-family: 'Poppins';
     font-weight: bold;
@@ -137,7 +149,8 @@ html, body {
     margin-top: 15px;
     text-align: right;
 }
-.sub_jogos{
+
+.sub_jogos {
     display: flex;
     margin-top: 20px;
     width: 100%;
@@ -145,7 +158,8 @@ html, body {
     align-items: flex-end;
     margin-bottom: 18px;
 }
-.inputcheck{
+
+.inputcheck {
     cursor: pointer;
     appearance: none;
     background-image: url("imgs/estrela_branca.png");
@@ -154,11 +168,13 @@ html, body {
     width: 24px;
     height: 24px;
 }
-.inputcheck:hover{
+
+.inputcheck:hover {
     background-color: #393939;
     border-radius: 50px;
 }
-.inputcheck:checked{
+
+.inputcheck:checked {
     appearance: none;
     width: 24px;
     height: 24px;
@@ -166,7 +182,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.botao_jogar{
+
+.botao_jogar {
     width: 8vw;
     height: 5vh;
     border: none;
@@ -177,11 +194,13 @@ html, body {
     font-family: 'Poppins';
     text-align: center;
 }
-.imagem_jogo{
+
+.imagem_jogo {
     width: 28vw;
     border-radius: 24px;
 }
-#botaoCarregar{
+
+#botaoCarregar {
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -194,11 +213,13 @@ html, body {
     font-size: 30px;
     font-weight: bold;
 }
-#botaoCarregar:hover{
+
+#botaoCarregar:hover {
     background-color: #000;
     color: #FFF;
 }
-.div_botao{
+
+.div_botao {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -209,10 +230,11 @@ html, body {
 
 /* fim homelong*/
 
-/* MENU LATERAL */ 
+/* MENU LATERAL */
 /* container = .menu-lateral */
 
-.menu-lateral { /*background, bordas, sombra*/ 
+.menu-lateral {
+    /*background, bordas, sombra*/
     width: 200px;
     background-color: #393939;
     border-top-right-radius: 10px;
@@ -221,26 +243,33 @@ html, body {
     box-shadow: 10px 5px 20px black;
     position: fixed;
     z-index: 4;
-    top: 10vh;
+    top: 20vh;
 }
 
 .btn {
     display: flex;
-    justify-content: flex-end; /* coloca a seta para a direita do menu */
+    justify-content: flex-end;
+    /* coloca a seta para a direita do menu */
 
 }
 
-.btn .arrow { /* espacamento da seta do menu */
+.btn .arrow {
+    /* espacamento da seta do menu */
     padding: 0 12px;
 }
 
-.menu { /* menu */
+.menu {
+    /* menu */
     display: flex;
-    height: 40px; /* altura do menu */
-    border-bottom: .5px solid #000; /* divisoria dos botoes do menu*/
-    color: #fff; /* cor da letra do menu */
-    align-items: center; 
-    cursor: pointer; /* muda o cursor para mãozinha */
+    height: 40px;
+    /* altura do menu */
+    border-bottom: .5px solid #000;
+    /* divisoria dos botoes do menu*/
+    color: #fff;
+    /* cor da letra do menu */
+    align-items: center;
+    cursor: pointer;
+    /* muda o cursor para mãozinha */
 }
 
 .menu:hover {
@@ -251,15 +280,18 @@ html, body {
     transition: .3s;
 }
 
-.icon { /*ajusta o tamanho dos icones para fixalos no menu */
-    flex: 1; /*poiscao dos icones no flex da div */
+.icon {
+    /*ajusta o tamanho dos icones para fixalos no menu */
+    flex: 1;
+    /*poiscao dos icones no flex da div */
     min-width: 60px;
     max-width: 60px;
 }
+
 .txt {
     flex: 5;
     padding-left: 20px;
-    
+
 }
 
 .menu button {
@@ -268,30 +300,34 @@ html, body {
     outline-offset: 0px;
     background: none;
     font-family: 'Poppins';
-    border:none!important;
+    border: none !important;
     color: #fff;
     cursor: pointer;
-    
+
 }
 
-.oculto { /* oculta o menu*/
+.oculto {
+    /* oculta o menu*/
     width: 60px;
 }
 
-.oculto .txt { /* oculta o texto do menu */
+.oculto .txt {
+    /* oculta o texto do menu */
     display: none;
     transition: .3s;
 
 }
 
-.oculto .btn svg { /* rotaciona a seta do menu */
+.oculto .btn svg {
+    /* rotaciona a seta do menu */
     transform: rotate(180deg);
     transition: .3s;
 }
-/* FIM -  MENU LATERAL */ 
+
+/* FIM -  MENU LATERAL */
 
 /* BOTÃO DE VOLTAR PRA CIMA */
-#voltar-topo{
+#voltar-topo {
     position: fixed;
     bottom: 30px;
     left: 50px;
@@ -311,4 +347,6 @@ html, body {
 
 #voltar-topo.visible {
     visibility: visible;
-} /* FIM - BOTÃO VOLTAR TOPO */
+}
+
+/* FIM - BOTÃO VOLTAR TOPO */
