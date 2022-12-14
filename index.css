@@ -138,6 +138,7 @@ body {
     text-align: left;
     font-family: 'Poppins';
     margin: 0px;
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -145,6 +146,8 @@ body {
     width: 100%;
     font-family: 'Poppins';
     font-weight: bold;
+    display: grid;
+    justify-content: center;
     margin: 0px;
     margin-top: 15px;
     text-align: right;
@@ -155,7 +158,6 @@ body {
     margin-top: 20px;
     width: 100%;
     justify-content: space-around;
-    align-items: flex-end;
     margin-bottom: 18px;
 }
 
