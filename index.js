@@ -12,18 +12,19 @@ let TODOS_JOGOS;
 function mostrarJogos(JOGOS) {//função que mostra os jogos na tela
     auxGames = JOGOS;
     
-    mostraBanner.innerHTML = `<div>
+    mostraBanner.innerHTML = `<div class="megabanner">
                                     <a href="${JOGOS[0].game_url}">
                                     <div class="div_banner">
+                                        <img class="imgbanner1" src="${JOGOS[0].thumbnail}">
                                         <div class="div_video">
-                                            <video loop="true" type="video/webm" autoplay="true">
-                                            <source src="https://www.freetogame.com/g/${JOGOS[0].id}/videoplayback.webm">
+                                            <video class="video" loop="true" type="video/webm" autoplay="true">
+                                                <source src="https://www.freetogame.com/g/${JOGOS[0].id}/videoplayback.webm">
                                             </video>
                                         </div>
                                         <img class="imgbanner2" src="${JOGOS[0].thumbnail}">
                                     </div>
                                     </a>
-                                    <img class="imgbanner1"src="${JOGOS[0].thumbnail}">
+                                    
                                     
                                 </div>`
 

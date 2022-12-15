@@ -76,25 +76,34 @@ html,body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
-
+    z-index: 1;
     margin-top: 40px;
 }
 .imgbanner2 {
     display: flex;
-    width: 40%;
+    width: 30%;
     border-radius: 28px;
     box-shadow: #000 30px 10px 50px;
+    z-index: 2;
+}
+.video{
+    display: flex;
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: #000 30px 10px 50px;
+    z-index: 2;
 }
 .div_video {
     display: flex;
-    width: 40%;
+    width: 30%;
     border-radius: 28px;
 }
 .imgbanner1 {
     filter: blur(20px);
     width: 98vw;
-    height: 100vh;
-    z-index: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
 #jogos {
     display: flex;
