@@ -26,6 +26,7 @@ html,body {
     flex-direction: row;
     cursor: pointer;
     width: 300px;
+    margin-left: 20px;
 }
 .titulo {
     color: white;
@@ -215,7 +216,6 @@ html,body {
 
 /* MENU LATERAL */
 /* container = .menu-lateral */
-
 .menu-lateral {
     /*background, bordas, sombra*/
     width: 200px;
@@ -298,7 +298,7 @@ html,body {
 /* BOTÃO DE VOLTAR PRA CIMA */
 #voltar-topo {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 50px;
     background-color: #FFF;
     border: none;
