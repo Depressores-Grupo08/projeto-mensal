@@ -15,6 +15,11 @@ function mostrarJogos(JOGOS) {//função que mostra os jogos na tela
     mostraBanner.innerHTML = `<div>
                                     <a href="${JOGOS[0].game_url}">
                                     <div class="div_banner">
+                                        <div class="div_video">
+                                            <video loop="true" type="video/webm" autoplay="true">
+                                            <source src="https://www.freetogame.com/g/${JOGOS[0].id}/videoplayback.webm">
+                                            </video>
+                                        </div>
                                         <img class="imgbanner2" src="${JOGOS[0].thumbnail}">
                                     </div>
                                     </a>

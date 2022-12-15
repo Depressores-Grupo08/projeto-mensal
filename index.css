@@ -74,16 +74,21 @@ html,body {
 .div_banner {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+
     margin-top: 40px;
 }
 .imgbanner2 {
     display: flex;
     width: 40%;
-    position: absolute;
-    z-index: 1;
     border-radius: 28px;
     box-shadow: #000 30px 10px 50px;
+}
+.div_video {
+    display: flex;
+    width: 40%;
+    border-radius: 28px;
 }
 .imgbanner1 {
     filter: blur(20px);
