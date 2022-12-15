@@ -1,8 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
-
-
-html,
-body {
+html,body {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,11 +7,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
 }
-
 .ativo {
     color: #FFD700 !important;
 }
-
 .headertp {
     background: #100D0D;
     height: 5vw;
@@ -24,37 +19,36 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-
 .logo {
-    padding: 10px 20px;
     display: flex;
     align-self: center;
     align-items: center;
     flex-direction: row;
     cursor: pointer;
+    width: 300px;
 }
-
 .titulo {
     color: white;
     font-size: 1.3rem;
     font-family: 'Poppins';
 }
-
 .barra {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 1.2vw;
+    width: 300px;
 }
 #favoritos.aba1{
     display: flex;
-    width: 100%;
+    justify-content: flex-end;
+    width: 300px;
     height: 100%;
-    text-align: center;
+    text-align: right;
     align-items: center;
     margin-right: 20px;
 }
-
 .aba1 {
     text-decoration: none;
     color: white;
@@ -64,31 +58,24 @@ body {
     display: flex;
     flex-direction: row;
 }
-
-
 .containter {
     display: flex;
     flex-direction: row;
 }
-
 .main {
     display: flex;
     flex-direction: row;
 }
-
 /*homelong*/
-
 #banner {
     height: 40%;
 }
-
 .div_banner {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
-
 .imgbanner2 {
     display: flex;
     width: 40%;
@@ -97,15 +84,12 @@ body {
     border-radius: 28px;
     box-shadow: #000 30px 10px 50px;
 }
-
 .imgbanner1 {
     filter: blur(20px);
     width: 98vw;
     height: 100vh;
     z-index: 0;
 }
-
-
 #jogos {
     display: flex;
     width: 100vw;
@@ -117,7 +101,6 @@ body {
     gap: 6vw;
     padding-left: 50px;
 }
-
 .div_jogos {
     margin-top: 30px;
     display: flex;
@@ -130,12 +113,11 @@ body {
     justify-content: space-between;
 }
 .div_jogos:hover{
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 500ms;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 500ms;
 }
-
 .p1 {
     width: 100%;
     text-align: center;
@@ -144,7 +126,6 @@ body {
     margin: 0px;
     margin-top: 20px;
 }
-
 .p2 {
     width: 100%;
     text-align: left;
@@ -152,7 +133,6 @@ body {
     margin: 0px;
     margin-top: 20px;
 }
-
 .p3 {
     display: flex;
     justify-content: flex-end;
@@ -163,7 +143,6 @@ body {
     text-align:right;
 
 }
-
 .sub_jogos {
     display: flex;
     margin-top: 20px;
@@ -171,7 +150,6 @@ body {
     justify-content: space-around;
     margin-bottom: 18px;
 }
-
 .inputcheck {
     cursor: pointer;
     appearance: none;
@@ -181,12 +159,10 @@ body {
     width: 24px;
     height: 24px;
 }
-
 .inputcheck:hover {
     background-color: #393939;
     border-radius: 50px;
 }
-
 .inputcheck:checked {
     appearance: none;
     width: 24px;
@@ -195,7 +171,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
 .botao_jogar {
     width: 8vw;
     height: 5vh;
@@ -207,12 +182,10 @@ body {
     font-family: 'Poppins';
     text-align: center;
 }
-
 .imagem_jogo {
     width: 100%;
     border-radius: 24px;
 }
-
 #botaoCarregar {
     width: 50px;
     height: 50px;
@@ -226,12 +199,10 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
-
 #botaoCarregar:hover {
     background-color: #000;
     color: #FFF;
 }
-
 .div_botao {
     display: flex;
     justify-content: center;
@@ -240,7 +211,6 @@ body {
     padding-bottom: 20px;
     padding-left: 50px;
 }
-
 /* fim homelong*/
 
 /* MENU LATERAL */
@@ -258,19 +228,15 @@ body {
     z-index: 4;
     top: 20vh;
 }
-
 .btn {
     display: flex;
     justify-content: flex-end;
     /* coloca a seta para a direita do menu */
-
 }
-
 .btn .arrow {
     /* espacamento da seta do menu */
     padding: 0 12px;
 }
-
 .menu {
     /* menu */
     display: flex;
@@ -284,7 +250,6 @@ body {
     cursor: pointer;
     /* muda o cursor para mãozinha */
 }
-
 .menu:hover {
     padding-left: 5px;
     background: linear-gradient(243.48deg, #161037 34.06%, #224750 91.65%);
@@ -292,7 +257,6 @@ body {
     border-bottom-right-radius: 10px;
     transition: .3s;
 }
-
 .icon {
     /*ajusta o tamanho dos icones para fixalos no menu */
     flex: 1;
@@ -300,13 +264,11 @@ body {
     min-width: 60px;
     max-width: 60px;
 }
-
 .txt {
     flex: 5;
     padding-left: 20px;
 
 }
-
 .menu button {
     outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;
@@ -316,27 +278,21 @@ body {
     border: none !important;
     color: #fff;
     cursor: pointer;
-
 }
-
 .oculto {
     /* oculta o menu*/
     width: 60px;
 }
-
 .oculto .txt {
     /* oculta o texto do menu */
     display: none;
     transition: .3s;
-
 }
-
 .oculto .btn svg {
     /* rotaciona a seta do menu */
     transform: rotate(180deg);
     transition: .3s;
 }
-
 /* FIM -  MENU LATERAL */
 
 /* BOTÃO DE VOLTAR PRA CIMA */
@@ -353,13 +309,10 @@ body {
     z-index: 5;
     visibility: hidden;
 }
-
 #voltar-topo:hover {
     filter: invert(1);
 }
-
 #voltar-topo.visible {
     visibility: visible;
 }
-
 /* FIM - BOTÃO VOLTAR TOPO */
