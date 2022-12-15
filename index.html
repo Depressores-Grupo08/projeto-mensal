@@ -61,36 +61,29 @@
 
             </div>
             <div class="menu">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" 
                     viewBox="0 0 256 256" onclick="filtrar('Card Game')">
                     <rect width="256" height="256" fill="none"></rect>
-                    <circle cx="80" cy="216" r="16"></circle>
-                    <circle cx="184" cy="216" r="16"></circle>
-                    <path
-                        d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8"
-                        fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                    </path>
+                    <rect x="32" y="80" width="160" height="128" rx="8" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                    <path d="M64,48H216a8,8,0,0,1,8,8V176" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
                 </svg>
                 <div class="txt">
                     <button id="cardGame" data-categoria="Card Game" onclick="filtrar('Card Game')">CARD GAME</button>
                 </div>
-
             </div>
 
             <div class="menu">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1a1a1a"
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
                     viewBox="0 0 256 256" onclick="filtrar('MMORPG')">
                     <rect width="256" height="256" fill="none"></rect>
-                    <circle cx="128" cy="128" r="96" fill="none" stroke="#ffffff" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></circle>
-                    <path d="M60,60.2A95.9,95.9,0,0,1,88,128a95.9,95.9,0,0,1-28,67.8" fill="none" stroke="#ffffff"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                    <path d="M196,60.2a96.1,96.1,0,0,0,0,135.6" fill="none" stroke="#ffffff" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></path>
-                    <line x1="32" y1="128" x2="224" y2="128" fill="none" stroke="#ffffff" stroke-linecap="round"
+                    <polyline points="76.2 132.2 152.2 40.2 216 40 215.8 103.8 123.8 179.8" fill="none" stroke="#ffffff"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="100" y1="156" x2="160" y2="96" fill="none" stroke="#fcfcfc" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="16"></line>
-                    <line x1="128" y1="32" x2="128" y2="224" fill="none" stroke="#ffffff" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
+                    <path
+                        d="M82.1,197.5,52.2,227.4a8,8,0,0,1-11.3,0L28.6,215.1a8,8,0,0,1,0-11.3l29.9-29.9a8,8,0,0,0,0-11.4L37.7,141.7a8,8,0,0,1,0-11.4l12.6-12.6a8,8,0,0,1,11.4,0l76.6,76.6a8,8,0,0,1,0,11.4l-12.6,12.6a8,8,0,0,1-11.4,0L93.5,197.5A8,8,0,0,0,82.1,197.5Z"
+                        fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                    </path>
                 </svg>
                 <div class="txt">
                     <button id="MMORPG" data-categoria="MMORPG" onclick="filtrar('MMORPG')">MMORPG</button>
@@ -115,7 +108,7 @@
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
-                    viewBox="0 0 256 256" onclick="filtrar('Battle Royale')">
+                    viewBox="0 0 256 256" onclick="filtrar('Fighting')">
                     <rect width="256" height="256" fill="none"></rect>
                     <path d="M128,104a24,24,0,0,1-48,0V64a24,24,0,0,1,48,0Z" fill="none" stroke="#ffffff"
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
@@ -131,17 +124,14 @@
                 </div>
             </div>
             <div class="menu">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
-                    viewBox="0 0 256 256" onclick="filtrar('Fighting')">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" 
+                viewBox="0 0 256 256" onclick="filtrar('Battle Royale')">
                     <rect width="256" height="256" fill="none"></rect>
-                    <polyline points="76.2 132.2 152.2 40.2 216 40 215.8 103.8 123.8 179.8" fill="none" stroke="#ffffff"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                    <line x1="100" y1="156" x2="160" y2="96" fill="none" stroke="#fcfcfc" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
-                    <path
-                        d="M82.1,197.5,52.2,227.4a8,8,0,0,1-11.3,0L28.6,215.1a8,8,0,0,1,0-11.3l29.9-29.9a8,8,0,0,0,0-11.4L37.7,141.7a8,8,0,0,1,0-11.4l12.6-12.6a8,8,0,0,1,11.4,0l76.6,76.6a8,8,0,0,1,0,11.4l-12.6,12.6a8,8,0,0,1-11.4,0L93.5,197.5A8,8,0,0,0,82.1,197.5Z"
-                        fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                    </path>
+                    <circle cx="92" cy="132" r="20" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                    <circle cx="164" cy="132" r="20" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                    <path d="M80,194.5a92,92,0,1,1,96,0V216a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                    <line x1="112" y1="224" x2="112" y2="192" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="144" y1="224" x2="144" y2="192" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
                 </svg>
                 <div class="txt">
                     <button id="Battle" data-categoria="Battle Royale" onclick="filtrar('Battle Royale')">BATTLE ROYALE</button>
@@ -149,7 +139,7 @@
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
-                    viewBox="0 0 256 256" onclick="filtrar('Shooter')">
+                    viewBox="0 0 256 256" onclick="filtrar('Strategy')">
                     <rect width="256" height="256" fill="none"></rect>
                     <line x1="40" y1="216" x2="40" y2="48" fill="none" stroke="#ffffff" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="16"></line>
@@ -162,7 +152,7 @@
             </div>
             <div class="menu">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff"
-                    viewBox="0 0 256 256" onclick="filtrar('Strategy')">
+                    viewBox="0 0 256 256" onclick="filtrar('Shooter')">
                     <rect width="256" height="256" fill="none"></rect>
                     <circle cx="128" cy="128" r="92" fill="none" stroke="#ffffff" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="16"></circle>
