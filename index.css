@@ -128,20 +128,21 @@ html,body {
     margin-top: 20px;
 }
 .p2 {
-    width: 100%;
-    text-align: left;
+    width: 90%;
+    text-align: justify;
     font-family: 'Poppins';
-    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
 }
 .p3 {
     display: flex;
     justify-content: flex-end;
-    width: 90%;
+    width: 93%;
     font-family: 'Poppins';
     font-weight: bold;
     margin: 0px;
-    text-align:right;
+    text-align: right;
 
 }
 .sub_jogos {
@@ -307,12 +308,12 @@ html,body {
     cursor: pointer;
     border-radius: 50px;
     z-index: 5;
-    visibility: hidden;
+    visibility: hidden; /* esconde o botão */
 }
 #voltar-topo:hover {
-    filter: invert(1);
+    filter: invert(1); /* inverte as cores a possicionar o cursor em cima */
 }
 #voltar-topo.visible {
-    visibility: visible;
+    visibility: visible; /* habilita a visibilidade do botão */
 }
 /* FIM - BOTÃO VOLTAR TOPO */
